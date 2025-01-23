@@ -1,0 +1,148 @@
+body {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+
+.basicblock {
+  background-color: #e0e0e0;
+  border: 1px solid black;
+  border-radius: 25px 0 0 25px;
+  width: 1200px;
+  height: 500px;
+  overflow: auto;
+  margin: 50px auto;
+}
+.blocl1 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl2 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl3 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl4 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl5 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl6 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl7 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl8 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl9 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl10 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+.blocl11 {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 210, 33);
+  box-shadow: inset 3px 3px 40px rgb(24, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
