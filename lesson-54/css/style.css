@@ -39,7 +39,7 @@ nav {
 }
 
 main {
-  background: url(/img/hero-bg.jpg);
+  background: url('../img/hero-bg.jpg');
   height: 508px;
   padding-top: 131px;
 }
