@@ -155,6 +155,7 @@ body {
 .main__wrap {
   display: flex;
   gap: 126px;
+  align-items: flex-start;
 }
 
 .aside {
