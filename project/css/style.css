@@ -559,6 +559,255 @@
 
 /*====================================================================*/
 
+.main__program {
+  margin-bottom: 140px;
+}
+.program {
+}
+.program__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 60px;
+}
+.program__heading {
+}
+.program__title {
+  color: #1f1711;
+  font-family: "Gabriola";
+  font-size: 74px;
+  line-height: 0.82;
+  margin-bottom: 20px;
+}
+.program__text {
+}
+.tab-controls {
+  display: flex;
+  align-items: end;
+  gap: 26px;
+  margin-bottom: 10px;
+}
+
+.tab-controls__item {
+}
+
+.tab-controls__link {
+  display: block;
+  border-radius: 100px;
+  padding: 14px 30px;
+  box-shadow: 0 4px 20px rgba(206, 195, 185, 0.3);
+  white-space: nowrap;
+
+  transition: all 0.5s;
+}
+
+.tab-controls__link:hover {
+  background: #ffe0cb;
+}
+.tab-controls__link--active {
+  background: #ffe0cb;
+  box-shadow: 0 4px 20px rgba(206, 195, 185, 0);
+}
+.tab-content {
+  display: none;
+}
+
+.tab-content--show {
+  display: block;
+}
+
+/*====================================================================*/
+
+.accordion-list {
+}
+.accordion-list__item {
+  border: 1px solid #ffa55c;
+  border-radius: 20px;
+
+  margin-bottom: 30px;
+}
+.accordion-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-list__control {
+  padding: 41px 30px;
+  background: transparent;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  transition: all 0.4s;
+}
+
+.accordion-list__item--opened .accordion-list__control {
+  padding-bottom: 20px;
+}
+
+.accordion-list__control:hover .accordion-list__control-icon {
+  transform: rotate(90deg);
+  background: #ffa55c;
+}
+.accordion-list__control:hover .accordion-list__control-icon path {
+  fill: #fff9f4;
+}
+
+.accordion-list__item--opened .accordion-list__control-icon {
+  transform: rotate(90deg);
+  background: #ffa55c;
+}
+.accordion-list__item--opened .accordion-list__control-icon path {
+  fill: #fff9f4;
+}
+.accordion-list__control-title {
+  font-family: Gabriola;
+  font-size: 42px;
+  line-height: 0.9;
+  color: #1f1711;
+  text-align: left;
+}
+.accordion-list__control-icon {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #ffa55c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.5s;
+  margin-left: 10px;
+}
+
+.accordion-list__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.accordion-content {
+  padding: 0 30px 40px 30px;
+  display: flex;
+  gap: 80px;
+}
+.accordion-content__col:first-child {
+  max-width: 507px;
+  width: 100%;
+}
+.accordion-content__title {
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: #ceaad0;
+  margin-bottom: 20px;
+}
+.accordion-content__list {
+}
+
+.accordion-content__item {
+  color: #312c27;
+  margin-bottom: 20px;
+  display: flex;
+}
+.accordion-content__item:last-child {
+  margin-bottom: 0px;
+}
+.accordion-content__icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ceaad0;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.accordion-content__icon img {
+  max-width: 9.6px;
+}
+.accordion-content__text {
+  color: #312c27;
+}
+
+/*====================================================================*/
+
+.program__bottom {
+  display: flex;
+  gap: 92px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.program__action {
+  display: grid;
+  grid-template: repeat(3, auto) / 1.6fr 1fr;
+  gap: 40px;
+  max-width: 500px;
+}
+.program__discount {
+  font-size: 20px;
+  border-radius: 20px;
+  background: #ffe0cb;
+  grid-row: 1 / 3;
+  padding: 40px;
+  color: #312c27;
+}
+.program__discount span {
+  font-size: 16px;
+  margin-left: 40%;
+}
+.program__discount-value {
+  display: block;
+  color: #ffa55c;
+  font-size: 74px;
+  line-height: 0.82;
+  font-family: Gabriola;
+  font-style: 16px;
+  margin: 0 0 7px 13%;
+
+  transform-origin: 0 0;
+
+  animation: discount 0.8s infinite alternate linear;
+}
+
+@keyframes discount {
+  0% {
+    color: #ffa55c;
+  }
+  100% {
+    transform: translateX(4%) translateY(5%) scale(1.15);
+    color: #ff9138;
+  }
+}
+
+.program__price {
+  max-width: 173px;
+}
+.program__price-text {
+  color: #ceaad0;
+  text-transform: uppercase;
+}
+.program__price-value {
+  color: #312c27;
+  font-size: 32px;
+  font-family: Gabriola;
+}
+.program__price-value--big {
+  color: #1f1711;
+  font-size: 50px;
+}
+
+.program__button {
+  grid-column: 1/-1;
+}
+.program__img {
+  max-width: 593px;
+}
+.program__img img {
+  width: 100%;
+}
+/*====================================================================*/
+
 @media (max-width: 1200px) {
   .hero__img-control {
     position: static;
@@ -591,6 +840,25 @@
   }
   .about__grid-item {
     width: 95%;
+  }
+
+  .program__bottom {
+    gap: 20px;
+  }
+  .program__action {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .program__discount {
+    padding: 40px 30px 40px;
+  }
+  .program__top {
+    flex-direction: column;
+    gap: 30px 15px;
+  }
+  .tab-controls {
+    justify-content: space-around;
+    gap: 10px;
   }
 }
 
@@ -626,6 +894,19 @@
   .footer__col:nth-child(2) {
     order: 0;
   }
+  .program__bottom {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .accordion-list__control-title {
+    font-size: 36px;
+  }
+  .accordion-list__control {
+    padding: 30px 20px;
+  }
+  .accordion-content {
+    padding: 0 20px 20px 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -650,6 +931,20 @@
     flex-wrap: wrap;
     gap: 32px 32px;
     justify-content: center;
+  }
+  .tab-controls {
+    justify-content: center;
+    gap: 10px;
+  }
+  .program__title {
+    font-size: 10vw;
+  }
+  .accordion-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .accordion-content__text br {
+    display: none;
   }
 }
 
@@ -691,8 +986,22 @@
   .modal__img {
     margin-left: 20px;
   }
+  .tab-controls {
+    flex-wrap: wrap;
+  }
+  .program__title {
+    font-size: 12vw;
+  }
+  .accordion-content__item {
+    margin-bottom: 10px;
+  }
 }
-
+@media (max-width: 500px) {
+  .program__discount {
+    grid-column: 1/3;
+    padding-left: 38px;
+  }
+}
 @media (max-width: 400px) {
   .about__img-control {
     bottom: 0px;
@@ -714,5 +1023,11 @@
   .modal__img {
     margin-left: 5px;
     width: 90%;
+  }
+  .program__title {
+    font-size: 12vw;
+  }
+  .program__price-value--big {
+    font-size: 45px;
   }
 }
