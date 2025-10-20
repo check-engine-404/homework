@@ -1,0 +1,160 @@
+.body {
+  font-family: "Montserrat", "arial", sans-serif;
+  line-height: 1.5;
+  font-style: 16px;
+  color: #312c27;
+  background-color: #fff9f4;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1280px;
+  height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.button {
+  font-style: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  background-color: #ffa55c;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 15px;
+  height: 62px;
+  transition: all 0.4s;
+}
+.button:hover {
+  background-color: #ff9138;
+}
+
+.body--opened-modal {
+  overflow: hidden;
+}
+.body--opened-menu {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: #00000062;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+}
+
+.body--opened-modal .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal--show {
+}
+.modal__window {
+  width: 430px;
+  height: 490px;
+  background-color: #fff9f4;
+  border-radius: 20px;
+  padding: 0 60px 60px;
+  position: relative;
+}
+
+.modal__cancle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal__cancle path,
+.modal__cancle rect {
+  transition: all 0.5s;
+}
+
+.modal__cancle:hover path,
+.modal__cancle:hover rect {
+  stroke: #ac907a;
+}
+
+.modal__img {
+  max-width: 100%;
+  margin-top: -65px;
+  margin-left: 12px;
+  margin-bottom: 15px;
+}
+.modal__title {
+  font-size: 42px;
+  font-family: Gabriola;
+  line-height: 0.9;
+  margin-bottom: 10px;
+}
+.modal__text {
+  margin-bottom: 30px;
+}
+.modal__form {
+}
+
+.field {
+  position: relative;
+}
+.field span {
+  position: absolute;
+  top: 12px;
+  left: 29px;
+  font-size: 11px;
+  visibility: hidden;
+}
+
+.field__input {
+  display: block;
+  width: 100%;
+  background: #00000000;
+  border: 1px solid #ac907a;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  padding: 19px 41px 19px 28px;
+  font-size: 16px;
+  transition: all 0.4s;
+}
+
+.field__input:hover {
+  border: 1px solid #ffa55c;
+}
+
+.field__input:focus {
+  padding: 26px 41px 12px 28px;
+  border: 1px solid #ffa55c;
+}
+.field__input:focus + span {
+  visibility: visible;
+}
+
+.field__input::placeholder {
+  color: #ac907a;
+  transition: all 0.4s;
+}
+.field__input:hover::placeholder {
+  color: #ffa55c;
+}
+
+.button {
+  width: 100%;
+}

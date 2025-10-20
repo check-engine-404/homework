@@ -71,3 +71,27 @@ accordionLists.forEach((el) => {
   });
 });
 
+/*======================================================================*/
+
+const swiper = new Swiper(".gallery__slider", {
+  spaceBetween: 32,
+  slidesPerView: 1.5,
+  pagination: {
+    el: ".gallery__pagination",
+    type: "fraction",
+  },
+
+  navigation: {
+    nextEl: ".gallery__next",
+    prevEl: ".gallery__prev",
+  },
+
+  breakpoints: {
+    601: {
+      slidesPerView: 3,
+    },
+    1101: {
+      slidesPerView: 4,
+    },
+  },
+});
