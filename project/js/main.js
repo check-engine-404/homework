@@ -113,9 +113,8 @@ new Swiper(".testimonial__slider", {
     draggable: true,
   },
 
-  
   breakpoints: {
-      901: {
+    901: {
       slidesPerView: 1.5,
     },
     1201: {
@@ -123,3 +122,7 @@ new Swiper(".testimonial__slider", {
     },
   },
 });
+
+const telInputs = document.querySelectorAll('input[type="tel"]');
+const im = new Inputmask("+7 (999) 999 - 99 - 99");
+im.mask(telInputs);

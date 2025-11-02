@@ -4,6 +4,7 @@
   font-style: 16px;
   color: #312c27;
   background-color: #fff9f4;
+  overflow-x: hidden;
 }
 
 .wrapper {

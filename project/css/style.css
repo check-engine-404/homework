@@ -645,6 +645,153 @@
 
 /*====================================================================*/
 
+.contact {
+  padding: 140px 0;
+  background: url(../img/decor/Group\ 9.png) 50% 0% / cover no-repeat;
+}
+.contact__inner {
+  display: flex;
+  align-items: end;
+  gap: 84px;
+  position: relative;
+}
+
+.contact__inner::before {
+  content: url(../img/decor/Group\ 7.png);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.contact__inner::after {
+  content: url(../img/decor/image\ 17.png);
+  position: absolute;
+  top: 6%;
+  right: 0%;
+}
+
+.contact__img img {
+  width: 100%;
+  filter: drop-shadow(0px 4px 30px 0px #c6b0a14d);
+}
+
+.contact__body {
+  max-width: 420px;
+}
+.contact__title {
+  font-family: Gabriola;
+  font-size: 74px;
+  line-height: 0.82;
+  margin-bottom: 20px;
+}
+.contact__text {
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__name-label {
+  position: relative;
+}
+.contact__name-label span {
+  position: absolute;
+  top: 12px;
+  left: 29px;
+  font-size: 11px;
+  visibility: hidden;
+}
+.contact__name:focus {
+  padding: 26px 41px 12px 28px;
+}
+.contact__name:focus + span {
+  visibility: visible;
+}
+
+.contact__name {
+  display: block;
+  width: 100%;
+  border-radius: 100px;
+  border: 1px solid #ac907a;
+  margin-bottom: 10px;
+  padding: 19px 28px;
+  background: transparent;
+}
+
+.contact__phone {
+  display: block;
+  border-radius: 100px;
+  border: 1px solid #ac907a;
+  padding: 19px 28px;
+  margin-bottom: 20px;
+  background: transparent;
+}
+.contact__phone:hover,
+.contact__name:hover {
+  border: 1px solid #ffa55c;
+}
+.contact__name:hover::placeholder,
+.contact__phone:hover::placeholder {
+  color: #ffa55c;
+}
+.contact__phone:focus,
+.contact__name:focus {
+  border: 1px solid #ffa55c;
+}
+.contact__name:focus::placeholder,
+.contact__phone:focus::placeholder {
+  color: #ffa55c;
+}
+
+.contact__checkbox-label {
+  display: flex;
+  align-items: start;
+  margin-bottom: 20px;
+  max-width: 288px;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.contact__checkbox-label a {
+  text-decoration: underline;
+}
+
+.contact__checkbox {
+  appearance: none;
+  border: 2px solid #ac907a;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.contact__checkbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../img/icon/cheked.svg) 60% 50% no-repeat;
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.contact__checkbox:hover {
+  border: 2px solid #ffa55c;
+  cursor: pointer;
+}
+.contact__checkbox:checked {
+  background: #ffa55c;
+  border: 2px solid #ffa55c;
+}
+.contact__checkbox:checked::before {
+  opacity: 1;
+}
+
+.contact__button {
+}
+
+/*====================================================================*/
+
 @media (max-width: 1200px) {
   .hero__img-control {
     position: static;
@@ -696,6 +843,16 @@
   .tab-controls {
     justify-content: space-around;
     gap: 10px;
+  }
+
+  .contact__inner::after {
+    top: -15%;
+    right: 0%;
+  }
+
+  .contact__inner {
+    align-items: center;
+    gap: 40px;
   }
 }
 
@@ -764,6 +921,18 @@
     width: 50%;
     margin: 0 auto;
   }
+
+  .contact__img {
+    display: none;
+  }
+
+  .contact__inner {
+    justify-content: center;
+  }
+  .contact__inner::after {
+    top: 0%;
+    right: 0%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -821,6 +990,11 @@
 
   .testimonial__title {
     font-size: 60px;
+  }
+  .contact__inner::after,
+  .contact__inner::before {
+    top: -25%;
+    right: 0%;
   }
 }
 
@@ -898,6 +1072,14 @@
     opacity: 0;
     overflow: hidden;
   }
+
+  .contact__inner::after,
+  .contact__inner::before {
+    display: none;
+  }
+  .contact__title {
+    font-size: 60px;
+  }
 }
 @media (max-width: 500px) {
   .program__discount {
@@ -936,6 +1118,15 @@
 
   .testimonial__slide {
     padding: 20px 10px 30px;
+  }
+
+  .contact__title {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .contact__text {
+    text-align: center;
   }
 }
 
