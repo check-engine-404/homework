@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инвестиции</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__inner">
+              <a class="header__logo" href="#">
+                <div class="header__logo-img">
+                  <img src="img/logo/shield.svg" alt="" />
+                </div>
+                LEADER<br />CLASSIC
+              </a>
+              <div class="lang">
+                <ul class="lang__list">
+                  <li class="lang__item activ">
+                    <img
+                      class="flag-icon"
+                      src="img/icon/flag.svg"
+                      alt="Флаг страны"
+                    />
+                    <p class="lang-selection">RU</p>
+                    <a
+                      class="lang-Button--selection"
+                      href="#"
+                      onclick="toggleMenu(event)"
+                    >
+                      <img
+                        src="img/icon/angle-small-down1.svg"
+                        alt="Значок галочки вниз"
+                      />
+                    </a>
+                    <ul class="dropdown">
+                      <li
+                        data-lang="RU"
+                        data-flag="img/icon/flag.svg"
+                        data-full="Russia"
+                        data-short="RU"
+                      >
+                        <img src="img/icon/flag.svg" alt="Флаг России" />
+                        Россия
+                      </li>
+                      <li
+                        data-lang="FR"
+                        data-flag="img/icon/france.svg"
+                        data-full="France"
+                        data-short="FR"
+                      >
+                        <img src="img/icon/france.svg" alt="Флаг Франции" />
+                        France
+                      </li>
+                      <li
+                        data-lang="GR"
+                        data-flag="img/icon/geogria.svg"
+                        data-full="Georgia"
+                        data-short="GE"
+                      >
+                        <img src="img/icon/geogria.svg" alt="Флаг Грузии" />
+                        Georgia
+                      </li>
+                      <li
+                        data-lang="JP"
+                        data-flag="img/icon/japan.svg"
+                        data-full="Japan"
+                        data-short="JP"
+                      >
+                        <img src="img/icon/japan.svg" alt="Флаг Японии" />
+                        Japan
+                      </li>
+                      <li
+                        data-lang="TW"
+                        data-flag="img/icon/tai.svg"
+                        data-full="Taiwan"
+                        data-short="TW"
+                      >
+                        <img src="img/icon/tai.svg" alt="Флаг Тайваня" />
+                        Taiwan
+                      </li>
+                      <li
+                        data-lang="VN"
+                        data-flag="img/icon/vietnam.svg"
+                        data-full="Vietnam"
+                        data-short="VN"
+                      >
+                        <img src="img/icon/vietnam.svg" alt="Флаг Вьетнама" />
+                        Vietnam
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <ul class="burger" id="burger">
+                <li class="burger__item"></li>
+                <li class="burger__item"></li>
+                <li class="burger__item"></li>
+                <li class="burger__item"></li>
+              </ul>
+              <div class="nav">
+                <ul class="nav__list">
+                  <li class="nav__link">
+                    <a class="nav__item" href="#">Тарифы</a>
+                  </li>
+                  <li class="nav__link">
+                    <a class="nav__item" href="#">Бонус</a>
+                  </li>
+                  <li class="nav__link">
+                    <a class="nav__item" href="#">Реферальная</a>
+                  </li>
+                  <li class="nav__link">
+                    <a class="nav__item" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__button">
+                <a class="header__button-reg" href="#">Войти</a>
+                <a class="header__button-open" href="#">Открыть счёт</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chance">
+          <div class="container">
+            <div class="chance__inner">
+              <div class="chance__preview">
+                <div class="chance__gift">
+                  <img src="img/decor/gift.png" alt="Подарок" />
+                </div>
+                <div class="chance__info">
+                  <h3 class="chance__title">
+                    Станьте миллионером с Leader Classic
+                  </h3>
+                  <p class="chence__text">
+                    Откройте счет, инвестируйте в фонды Leader Classic и
+                    получите шанс выиграть один из 100 000 000 ₽
+                  </p>
+                </div>
+              </div>
+              <div class="countdown" id="countdown">
+                <span id="days">0</span> д : <span id="hours">0</span> ч :
+                <span id="minutes">0</span> м : <span id="seconds">10</span> с
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="action">
+          <div class="container">
+            <div class="action__inner">
+              <div class="action__content">
+                <h1 class="action__title">
+                  ТОП-5 акций <br />
+                  с доходностью до 10-30% уже в 2022 году
+                </h1>
+                <ul class="ation__list">
+                  <li class="ation__item">
+                    Открытие брокерского счета за 5 минут без визита в офис
+                  </li>
+                  <li class="ation__item">
+                    Доступ к ценным бумагам с любого устройства
+                  </li>
+                  <li class="ation__item">Поддержка в чате 24/7</li>
+                </ul>
+                <div class="action__button">
+                  <button class="action__button-download button">
+                    <img
+                      src="img/decor/paper.png"
+                      alt="Чек лист эффективности"
+                    />Скачать ТОП-5 акций
+                  </button>
+                  <button class="action__button-openScore">Открыть счёт</button>
+                </div>
+                <div class="action__investors">
+                  <div class="action__investors-1">
+                    <img src="img/girl.jpg" alt="" />
+                  </div>
+                  <div class="action__investors-2">
+                    <img src="img/boyW.jpg" alt="" />
+                  </div>
+                  <div class="action__investors-3">
+                    <img src="img/boyB.jpg" alt="" />
+                  </div>
+                  <p class="action__text">
+                    Сейчас инвестируют <br />
+                    100 000+ пользователей
+                  </p>
+                </div>
+              </div>
+              <div class="action__img-handPhone">
+                <img
+                  class="hand-max"
+                  src="img/decor/WoodenHandiPhone.png"
+                  alt="Phone"
+                />
+                <img
+                  class="hand-mini"
+                  src="img/decor/WoodenHan iPhone2.png"
+                  alt="Phone"
+                />
+              </div>
+              <div class="action__gradient-Box"></div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main>
+        <section class="stocks">
+          <div class="container">
+            <div class="stocks__inner">
+              <h1 class="stocks__title">Ваши деньги способны на большее</h1>
+              <p class="stocks__text">
+                Сколько бы вы заработали, инвестируя <span>100 000 ₽</span> год
+                назад?
+              </p>
+              <ul class="stocks__list">
+                <li class="stocks__item">
+                  <div class="stocks__item-img">
+                    <img src="img/icon/Tesla.svg" alt="Логотип Тесла" />
+                  </div>
+                  +83.97%
+                  <span>+72.000₽</span>
+                </li>
+                <li class="stocks__item">
+                  <div class="stocks__item-img">
+                    <img src="img/icon/amazon.svg" alt="Логотип Амазон" />
+                  </div>
+                  +4.11%
+                  <span>+72.000₽</span>
+                </li>
+                <li class="stocks__item">
+                  <div class="stocks__item-img">
+                    <img src="img/icon/apple.svg" alt="Логотип Эпыл" />
+                  </div>
+                  +26.36%
+                  <span>+72.000₽</span>
+                </li>
+                <li class="stocks__item">
+                  <div class="stocks__item-img">
+                    <img src="img/icon/Yandex.svg" alt="Логотип Яндекс" />
+                  </div>
+                  +17.19%
+                  <span>+72.000₽</span>
+                </li>
+                <li class="stocks__item">
+                  <div class="stocks__item-img">
+                    <img src="img/icon/facebook.svg" alt="Логотип Фэйсбук" />
+                  </div>
+                  +31.32% <span>+72.000₽</span>
+                </li>
+                <li class="stocks__item">
+                  <div class="stocks__item-img">
+                    <img
+                      src="img/icon/Microsoft.svg"
+                      alt="Логотип Майкрософт"
+                    />
+                  </div>
+                  +38.99% <span>+72.000₽</span>
+                </li>
+              </ul>
+              <p class="stocks__text-more">
+                И еще более 10 000 других ценных бумаг доступно
+                <span>в каталоге</span>
+              </p>
+              <button class="stocks__button button">Получить каталог</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+      <div class="modal">
+        <div class="modal__window">
+          <div class="modal__cancel">
+            <a class="modal__cancel-click" href="#"
+              ><img src="img/icon/X.svg" alt="Крестик"
+            /></a>
+          </div>
+          <p class="modal__text">
+            Войдите в личный кабинет, <br />или зарегестрируйтесь.
+          </p>
+          <form class="modal__form" action="#">
+            <label class="modal__form-label"
+              ><input
+                class="modal__form-input"
+                type="text"
+                placeholder="Логин"
+              />
+              <span>Введите логин</span></label
+            >
+            <label class="modal__form-label">
+              <input
+                class="modal__form-input"
+                type="password"
+                placeholder="Пароль"
+              />
+              <span>Введите пароль</span>
+            </label>
+          </form>
+          <button class="modal__button" type="button">Войти</button>
+          <a class="modal__registr" href="#">Регистрация</a>
+        </div>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
