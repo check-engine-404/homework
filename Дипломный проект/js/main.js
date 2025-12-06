@@ -98,3 +98,75 @@ document.querySelectorAll(".nav__list li a").forEach((link) => {
     document.querySelector(".nav").classList.remove("show");
   });
 });
+
+/*=============================   draggablePoint =======================================*/
+
+const point = document.getElementById("draggablePoint");
+const line = document.getElementById("line");
+const discountSpan = document.querySelector(".chart__text-discount");
+const riskSpan = document.querySelector(".chart__text-risk");
+
+let isDragging = false;
+
+point.addEventListener("mousedown", startDrag);
+document.addEventListener("mouseup", endDrag);
+document.addEventListener("mousemove", duringDrag);
+
+// Для мобильных устройств
+point.addEventListener("touchstart", startDrag);
+document.addEventListener("touchend", endDrag);
+document.addEventListener("touchmove", duringDrag);
+
+function startDrag(e) {
+  e.preventDefault();
+  isDragging = true;
+}
+
+function endDrag(e) {
+  isDragging = false;
+}
+
+function duringDrag(e) {
+  if (!isDragging) return;
+
+  let clientX;
+  if (e.touches) {
+    clientX = e.touches[0].clientX;
+  } else {
+    clientX = e.clientX;
+  }
+
+  const rect = line.getBoundingClientRect();
+  let newLeft = clientX - rect.left;
+
+  // Ограничения по ширине линии
+  if (newLeft < 0) newLeft = 0;
+  if (newLeft > rect.width) newLeft = rect.width;
+
+  // Обновляем позицию точки
+  point.style.left = `${newLeft}px`;
+
+  // Вычисляем процентное положение точки
+  const percentage = (newLeft / rect.width) * 100;
+
+  // Меняем текст в зависимости от положения
+  if (percentage <= 40) {
+    discountSpan.textContent = "до 5%";
+    riskSpan.textContent = "Низкий риск";
+    riskSpan.style.backgroundImage =
+      "linear-gradient(rgba(66, 89, 74, 0.4), rgba(101, 204, 125, 0.22))";
+    line.style.backgroundImage = `linear-gradient(to right, #61bb75 ${percentage}%, #303030 ${percentage}%)`;
+  } else if (percentage > 40 && percentage <= 75) {
+    discountSpan.textContent = "до 10%";
+    riskSpan.textContent = "Средний риск";
+    riskSpan.style.backgroundImage =
+      "linear-gradient(rgba(148, 140, 49, 0.26), rgba(245, 222, 17, 0.25))";
+    line.style.backgroundImage = `linear-gradient(to right, #f7de11 ${percentage}%, #303030 ${percentage}%)`;
+  } else {
+    discountSpan.textContent = "до 15%";
+    riskSpan.textContent = "Высокий риск";
+    riskSpan.style.backgroundImage =
+      "linear-gradient(rgba(148, 49, 49, 0.26), rgba(245, 17, 17, 0.25))";
+    line.style.backgroundImage = `linear-gradient(to right, #f51111 ${percentage}%, #303030 ${percentage}%)`;
+  }
+}
