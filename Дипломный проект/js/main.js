@@ -99,7 +99,7 @@ document.querySelectorAll(".nav__list li a").forEach((link) => {
   });
 });
 
-/*=============================   draggablePoint =======================================*/
+/*=============================   DraggablePoint =======================================*/
 
 const point = document.getElementById("draggablePoint");
 const line = document.getElementById("line");
@@ -170,3 +170,50 @@ function duringDrag(e) {
     line.style.backgroundImage = `linear-gradient(to right, #f51111 ${percentage}%, #303030 ${percentage}%)`;
   }
 }
+
+/*=============================   Accordion =======================================*/
+document.querySelectorAll(".accordion__item-click").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const item = button.closest(".accotdion__item");
+    const hiddenContent = item.querySelector(".accordion__item-hidden");
+    const visionSpan = item.querySelector(".accordion__item-vision span");
+
+    const isOpen = hiddenContent.style.display === "block";
+
+    // Закрываем все
+    document.querySelectorAll(".accordion__item-hidden").forEach((content) => {
+      content.style.display = "none";
+    });
+
+    // Восстанавливаем бордер у всех кнопок
+    document.querySelectorAll(".accordion__item-click").forEach((btn) => {
+      btn.style.border = "3px solid #272932";
+    });
+
+    // Убираем фон у всех vision span
+    document
+      .querySelectorAll(".accordion__item-vision span")
+      .forEach((span) => {
+        span.style.background = "";
+      });
+
+    // Открываем текущий, если закрыт
+    if (!isOpen) {
+      hiddenContent.style.display = "block";
+
+      // Добавляем фон
+      if (visionSpan) {
+        visionSpan.style.background =
+          "linear-gradient(to bottom, #6ba758, #23503d)";
+      }
+      // Меняем бордер только у текущего открытого элемента
+      button.style.border = "3px solid #62666f"; // например, красный
+    }
+  });
+});
+
+const telInputs = document.querySelectorAll('input[type="tel"]');
+const im = new Inputmask("+7 (999) 999 - 99 - 99");
+im.mask(telInputs);

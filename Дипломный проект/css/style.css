@@ -1064,7 +1064,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 172px;
+  max-width: 172px;
+  width: 100%;
   height: 32px;
   border-radius: 35px;
   background: linear-gradient(rgba(66, 89, 74, 0.4), rgba(101, 204, 125, 0.22));
@@ -1077,7 +1078,8 @@ body {
 .chart__line {
   position: relative;
   display: block;
-  width: 412px;
+  max-width: 412px;
+  width: 100%;
   height: 10px;
   background-color: #303030;
   margin-bottom: 50px;
@@ -1134,10 +1136,12 @@ body {
   font-size: 25px;
   line-height: 1.58;
   max-width: 510px;
+  width: 100%;
   margin-bottom: 50px;
 }
 .briefcase__body-info-button {
-  width: 378px;
+  max-width: 378px;
+  width: 100%;
   height: 106px;
   font-weight: 700;
   font-size: 22px;
@@ -1204,7 +1208,517 @@ body {
   color: transparent;
   text-align: center;
 }
+/*=============================   Mobile  =======================================*/
+.mobile {
+  margin-bottom: 280px;
+}
+.mobile__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 500px;
+}
+.mobile__tablet-column {
+  display: flex;
+  gap: 50px;
+}
+.mobile__tablet {
+  align-self: flex-start;
+  max-width: 560px;
+  margin-left: 100px;
+}
 
+.mobile__tablet-title {
+  text-align: left;
+  margin-bottom: 25px;
+}
+.mobile__tablet-text {
+  font-size: 25px;
+  line-height: 1.58;
+}
+.mobile__tablet-img {
+  position: relative;
+  max-width: 2000px;
+  width: 100%;
+}
+.mobile__tablet-img:after {
+  content: "";
+  position: absolute;
+  top: 0px; /* или по вашему желанию */
+  right: 0px;
+  transform: translate(-400px, 50px);
+  width: 204px; /* любой размер или 100% для растяжения */
+  height: 408px; /* любой размер */
+  background-image: linear-gradient(
+    135deg,
+    rgba(152, 194, 105, 1),
+    rgba(158, 223, 182, 1)
+  );
+
+  filter: blur(300px); /* размытие */
+  z-index: -2; /* чтобы был позади содержимого */
+  pointer-events: none; /* чтобы не мешал взаимодействию */
+}
+.mobile__tablet-img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  clip-path: inset(0 10px 0 0);
+  transform: translate(100px, -70px);
+  z-index: -1;
+}
+
+.mobile__phone-column {
+  display: flex;
+}
+.mobile__phone {
+  position: relative;
+  align-self: flex-end;
+  max-width: 540px;
+  margin-right: 50px;
+}
+.mobile__phone-img::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* или по вашему желанию */
+  left: 0px;
+  transform: translate(250px, 30px);
+  width: 200px; /* любой размер или 100% для растяжения */
+  height: 208px; /* любой размер */
+  background-image: linear-gradient(
+    135deg,
+    rgba(152, 194, 105, 1),
+    rgba(158, 223, 182, 1)
+  );
+
+  filter: blur(200px); /* размытие */
+  z-index: -2; /* чтобы был позади содержимого */
+  pointer-events: none; /* чтобы не мешал взаимодействию */
+}
+.mobile__phone-title {
+  text-align: left;
+  margin-bottom: 25px;
+}
+.mobile__phone-text {
+  font-size: 25px;
+  line-height: 1.58;
+  margin-bottom: 50px;
+}
+.mobile__phone-button {
+  display: flex;
+  gap: 20px;
+}
+.mobile__phone-button-ios {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff99;
+  background-color: transparent;
+  border-radius: 35px;
+  padding: 24px 8px;
+  max-width: 245px;
+  width: 100%;
+}
+.mobile__phone-button-ios::before {
+  position: absolute;
+  content: url(../img/icon/appleLog.svg);
+  top: 20px;
+  left: 30px;
+}
+.mobile__phone-button-android {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 8px 24px 40px;
+  border: 2px solid #ffffff99;
+  background-color: transparent;
+  border-radius: 35px;
+  max-width: 245px;
+  width: 100%;
+}
+.mobile__phone-button-android::before {
+  position: absolute;
+  content: url(../img/icon/androidLog.svg);
+  top: 20px;
+  left: 30px;
+}
+.mobile__phone-img {
+  position: relative;
+  max-width: 2000px;
+  width: 100%;
+  align-self: start;
+}
+
+.mobile__phone-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  clip-path: inset(0 10px 0 0);
+  transform: translate(0px, -50px);
+}
+/*=============================   Question =======================================*/
+.question {
+  margin-bottom: 180px;
+}
+.question__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+.question__consult {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+.question__consult-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.question__consult-text {
+  max-width: 343px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.59;
+  margin-bottom: auto;
+}
+.question__consult-button {
+  display: flex;
+  max-width: 376px;
+  height: 106px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.59;
+  color: #000000;
+  transition: all 0.4s;
+}
+.question__consult-button:active {
+  box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 49px -3px rgba(226, 128, 72, 0.4);
+}
+.accordion {
+  width: 100%;
+}
+.accotdion__item {
+  margin-bottom: 75px;
+}
+.accotdion__item:last-child {
+  margin-bottom: 0px;
+}
+.accordion__item-vision {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.17;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.accordion__item-vision:hover span {
+  background: linear-gradient(to bottom, #6ba758, #23503d);
+}
+
+.accordion__item-vision span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #24242d;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.17;
+  margin-right: 80px;
+  flex-shrink: 0;
+}
+
+.accordion__item-click {
+  display: flex;
+  margin-left: auto;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #272932;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.accordion__item-click img {
+  width: 100%;
+  transform: scale(0.5);
+}
+.accordion__item-hidden {
+  display: none;
+  background: linear-gradient(to bottom, #6aa75852, #23503d6c);
+  border: 3px solid rgb(146, 146, 146);
+  border-top: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+.accordion__item-text {
+  font-size: 22px;
+}
+/*=============================   Application =======================================*/
+
+.application {
+  margin-bottom: 130px;
+}
+.application__inner {
+  display: flex;
+  flex-direction: column;
+}
+.application__title {
+  margin-bottom: 80px;
+}
+.application__body {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 130px;
+  gap: 60px;
+}
+.application__column-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  margin-bottom: 35px;
+  border-radius: 24px;
+  max-width: 135px;
+  width: 100%;
+  height: 135px;
+}
+.one {
+  background: linear-gradient(
+    136.87deg,
+    #16373a 8.16%,
+    #0a1f24 31.4%,
+    #0b1b23 47.14%,
+    #122b31 87.5%
+  );
+}
+.two {
+  background: linear-gradient(321.99deg, #82c36d 2.26%, #25523e 92.51%);
+}
+.three {
+  background: linear-gradient(135.49deg, #76b467 11.3%, #295740 97.24%);
+}
+
+.application__column-card--number {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.59;
+  color: #000000;
+}
+.application__column-title {
+  font-size: 35px;
+  line-height: 1.3;
+  margin-bottom: 23px;
+}
+.application__column-text {
+  max-width: 377px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.59;
+}
+.dotted {
+  position: absolute;
+  top: 67px;
+  right: -330px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px; /* или нужная длина */
+  height: 1px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='279' height='1'><line x1='0' y1='0' x2='279' y2='0' stroke='white' stroke-width='2' stroke-dasharray='10,10'/></svg>");
+  background-repeat: repeat-x; /* если нужно повторение штрихов */
+}
+.circle {
+  padding-top: 10px;
+}
+.arrow {
+  padding-top: 10px;
+}
+.application__form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.application__form::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* или по вашему желанию */
+  left: 0px;
+  transform: translate(-50px, 200px);
+  max-width: 1500px; /* любой размер или 100% для растяжения */
+  width: 100%;
+  height: 208px; /* любой размер */
+  background-image: linear-gradient(
+    180deg,
+    rgba(152, 194, 105, 1),
+    rgba(158, 223, 182, 1)
+  );
+  filter: blur(200px); /* размытие */
+  z-index: -2; /* чтобы был позади содержимого */
+  pointer-events: none; /* чтобы не мешал взаимодействию */
+}
+.application__label {
+  position: relative;
+  max-width: 376px;
+  width: 100%;
+}
+.application__label span {
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.59;
+  visibility: hidden;
+}
+.application__input {
+  display: block;
+  width: 100%;
+  height: 106px;
+  border-radius: 20px;
+  background: #202020;
+  border: 4px solid #ffffff4a;
+  font-size: 22px;
+  color: white;
+  padding-left: 36px;
+}
+.application__input:focus + span {
+  top: 10px;
+  visibility: inherit;
+}
+.application__input:focus {
+  padding-top: 20px;
+}
+.application__input:focus::placeholder {
+  color: #202020;
+}
+.application__button {
+  max-width: 376px;
+  width: 100%;
+  height: 106px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.59;
+  color: #000000;
+  transition: all 0.4s;
+}
+.application__button:active {
+  box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 49px -3px rgba(226, 128, 72, 0.4);
+}
+/*=============================   Footer   =======================================*/
+.footer {
+  width: 100%;
+  background-color: #202020;
+
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 0;
+  width: 100%;
+}
+.footer__right {
+}
+.footer__rigth-logo {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+  font-family: serif;
+}
+.footer__rigth-logo::before {
+  content: url(../img/logo/crown.svg);
+  position: absolute;
+  top: -23px;
+  left: 9px;
+}
+.footer__rigth-social {
+  display: flex;
+  gap: 15px;
+  max-width: 250px;
+  width: 100%;
+  padding: 10px 10px 10px 0px;
+  margin-bottom: 20px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #ffffff4a;
+  border-radius: 50%;
+}
+.social a {
+  padding: 11px;
+  width: 45px;
+}
+.social img {
+  width: 100%;
+}
+.footer__rigth-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline;
+}
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__left-text {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1, 50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer__left-phone {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+.footer__left-button {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.59;
+  max-width: 274px;
+  width: 100%;
+  height: 71px;
+  color: #000000;
+  transition: all 0.4s;
+}
+.footer__left-button:active {
+  box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 49px -3px rgba(226, 128, 72, 0.4);
+}
 /*=============================   Media adaptive =======================================*/
 
 @media (max-width: 1600px) {
@@ -1263,6 +1777,41 @@ body {
   .briefcase__body-info-title {
     text-align: center;
   }
+  .briefcase__body-info-text {
+    text-align: center;
+  }
+  /*=============================   Mobile  =======================================*/
+  .mobile__inner {
+    gap: 300px;
+  }
+  .mobile__tablet-img:after {
+    transform: translate(-250px, 50px) scale(0.8);
+  }
+  .mobile__tablet-img img {
+    transform: translate(200px, -70px) scale(0.8);
+  }
+
+  .mobile__phone-img img {
+    transform: translate(-90px, -50px) scale(0.8);
+  }
+  .mobile__phone-img::before {
+    transform: translate(250px, 50px) scale(0.8);
+  }
+  /*=============================   Question =======================================*/
+  .question__inner {
+    gap: 50px;
+  }
+  .accordion__item-vision span {
+    margin-right: 40px;
+  }
+  .accordion__item-vision {
+    font-size: 35px;
+  }
+  /*=============================   Application =======================================*/
+  .dotted {
+    right: -250px;
+    width: 200px; /* или нужная длина */
+  }
 }
 @media (max-width: 1300px) {
   /*=============================   Header =======================================*/
@@ -1316,6 +1865,66 @@ body {
     display: block;
     margin-top: -180px;
     opacity: 0.5;
+  }
+  /*=============================   Mobile  =======================================*/
+  .mobile__inner {
+    gap: 200px;
+  }
+  .mobile__tablet-img:after {
+    transform: translate(-200px, 0px) scale(0.6);
+  }
+  .mobile__tablet-img img {
+    transform: translate(250px, -100px) scale(0.6);
+  }
+
+  .mobile__phone-img img {
+    transform: translate(-150px, -50px) scale(0.6);
+  }
+  .mobile__phone-img::before {
+    transform: translate(200px, 80px) scale(0.6);
+  }
+  /*=============================   Application =======================================*/
+  .application__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 60px 60px;
+  }
+  .application__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  .application__column:last-child {
+    grid-column: 1/3;
+  }
+  .application__column br {
+    display: none;
+  }
+  .application__column-title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .application__column-text {
+    max-width: 100%;
+    text-align: center;
+    font-size: 26px;
+  }
+  .dotted {
+    display: none;
+  }
+  .application__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
+  .application__button {
+    grid-column: 2/3;
+    justify-self: center;
+  }
+  .application__label {
+    justify-self: center;
   }
 }
 @media (max-width: 1200px) {
@@ -1448,6 +2057,9 @@ body {
     gap: 50px;
   }
   /*=============================   briefcase =======================================*/
+  .briefcase {
+    margin-bottom: 140px;
+  }
   .briefcase__inner {
     flex-direction: column;
     align-items: center;
@@ -1471,6 +2083,72 @@ body {
   }
   .briefcase__column span {
     font-size: 22px;
+  }
+  /*=============================   Mobile  =======================================*/
+  .mobile {
+    margin-bottom: 100px;
+  }
+  .mobile__inner {
+    gap: 00px;
+  }
+  .mobile__tablet-column {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .mobile__tablet {
+    align-self: center;
+    margin: 0 auto;
+  }
+  .mobile__tablet-img:after {
+    display: none;
+  }
+  .mobile__tablet-img img {
+    position: relative;
+    transform: scale(0.8);
+    width: 100%;
+  }
+  .mobile__phone-column {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+  .mobile__phone {
+    align-self: center;
+    margin: 0 auto;
+  }
+  .mobile__phone-img img {
+    position: relative;
+    transform: scale(0.8);
+    width: 100%;
+  }
+  .mobile__phone-img::before {
+    display: none;
+  }
+  /*=============================   Question =======================================*/
+  .question__inner {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .question__consult {
+    width: 100%;
+    align-items: center;
+  }
+  .question__consult-title {
+    text-align: center;
+  }
+  .question__consult-text {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .question__consult-button {
+    max-width: 376px;
+    width: 100%;
+  }
+  .accordion__item-vision span {
+    margin-right: 80px;
+  }
+  .accotdion__item {
+    padding: 0 30px;
   }
 }
 @media (max-width: 900px) {
@@ -1558,6 +2236,23 @@ body {
   .briefcase__column {
     gap: 80px;
     flex-wrap: wrap;
+  }
+  /*=============================   Question =======================================*/
+
+  .accordion__item-vision span {
+    margin-right: 40px;
+  }
+  .accotdion__item {
+    padding: 0 10px;
+  }
+
+  /*=============================   Application =======================================*/
+
+  .application__form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .application__button {
+    grid-column: 2/3;
   }
 }
 @media (max-width: 800px) {
@@ -1664,6 +2359,47 @@ body {
     position: relative;
     margin-bottom: -230px;
     transform: scale(0.8);
+  }
+  /*=============================   Question =======================================*/
+  .accordion__item-vision {
+    font-size: 30px;
+  }
+  .accordion__item-vision span {
+    margin-right: 20px;
+  }
+  .accotdion__item {
+    padding: 0 10px;
+  }
+  /*=============================   Application =======================================*/
+  .application__body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .application__column:last-child {
+    grid-column: auto;
+  }
+}
+@media (max-width: 700px) {
+  /*=============================   briefcase =======================================*/
+  .briefcase__body {
+    max-width: 630px;
+  }
+  /*=============================   Question =======================================*/
+  .accordion__item-vision {
+    font-size: 25px;
+  }
+  .accordion__item-vision span {
+    margin-right: 10px;
+  }
+  .accotdion__item {
+    padding: 0 5px;
+  }
+  /*=============================   Application =======================================*/
+
+  .application__form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .application__button {
+    grid-column: auto;
   }
 }
 @media (max-width: 650px) {
@@ -1813,18 +2549,68 @@ body {
   /*=============================   Cards  =======================================*/
   .cards__grid-column {
     height: 450px;
-
     padding: 30px 30px 30px 30px;
   }
+  .cards {
+    margin-bottom: 0px;
+  }
   /*=============================   briefcase =======================================*/
-  .briefcase__body-info {
- 
+  .chart__arch {
+    margin-bottom: -170px;
+    transform: scale(0.5);
+  }
+  .chart__text {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 1.57;
+  }
+  .chart__text-discount {
+    font-size: 45px;
+  }
+  .chart__line {
+    max-width: 370px;
+  }
+  .chart__arch-radio {
+    margin-left: -20px;
+    font-size: 22px;
+  }
+  .briefcase {
+    margin-bottom: 80px;
   }
   .briefcase__body-info-title {
-
+    max-width: 390px;
+  }
+  .briefcase__body-info-text {
+    max-width: 390px;
+    font-size: 22px;
+  }
+  /*=============================   Mobile  =======================================*/
+  .mobile__tablet-text {
+    font-size: 22px;
+  }
+  .mobile__phone-text {
+    font-size: 22px;
+  }
+  .mobile__phone-button {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .mobile__phone-button-ios {
+    padding: 15px 15px;
+  }
+  .mobile__phone-button-ios::before {
+    top: 11px;
+    left: 15px;
+  }
+  .mobile__phone-button-android {
+    padding: 15px 15px;
+  }
+  .mobile__phone-button-android::before {
+    top: 11px;
+    left: 15px;
   }
 }
-
 @media (max-width: 400px) {
   /*=============================   Header =======================================*/
 
@@ -1943,6 +2729,136 @@ body {
     font-size: 22px;
   }
   .cards__grid-column-text {
+    font-size: 18px;
+  }
+  /*=============================   briefcase =======================================*/
+  .chart {
+    max-width: 400px;
+  }
+  .chart__arch {
+    margin-bottom: -170px;
+    transform: scale(0.4);
+  }
+  .chart__text {
+    font-size: 18px;
+  }
+  .chart__text-discount {
+    font-size: 30px;
+  }
+  .chart__line {
+    max-width: 280px;
+  }
+  .chart__arch-radio {
+    font-size: 18px;
+  }
+  .chart__checkbox {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: -8px;
+  }
+  .briefcase__body-info-text {
+    font-size: 18px;
+    max-width: 300px;
+  }
+  .briefcase__body-info-button {
+    font-size: 18px;
+    max-width: 300px;
+  }
+  .briefcase__body {
+    margin-bottom: 50px;
+  }
+  .briefcase__column {
+    gap: 40px;
+  }
+  .briefsace__column-investors {
+    gap: 10px;
+    font-size: 40px;
+  }
+  .briefsace__column-instrument {
+    gap: 10px;
+    font-size: 40px;
+  }
+  .briefsace__column-result {
+    gap: 10px;
+    font-size: 40px;
+  }
+  /*=============================   Mobile  =======================================*/
+  .mobile__tablet-text {
+    font-size: 18px;
+  }
+  .mobile__phone-text {
+    font-size: 18px;
+  }
+  .mobile__phone-button {
+    display: flex;
+    gap: 20px;
+  }
+  .mobile__phone-button-ios {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff99;
+    background-color: transparent;
+    border-radius: 35px;
+    padding: 24px 8px;
+    max-width: 245px;
+    width: 100%;
+  }
+  .mobile__phone-button-ios::before {
+    position: absolute;
+    content: url(../img/icon/appleLog.svg);
+    top: 20px;
+    left: 30px;
+  }
+  .mobile__phone-button-android {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 8px 24px 40px;
+    border: 2px solid #ffffff99;
+    background-color: transparent;
+    border-radius: 35px;
+    max-width: 245px;
+    width: 100%;
+  }
+  .mobile__phone-button-android::before {
+    position: absolute;
+    content: url(../img/icon/androidLog.svg);
+    top: 20px;
+    left: 30px;
+  }
+  /*=============================   Question =======================================*/
+  .question {
+    margin-bottom: 120px;
+  }
+  .question__consult-button {
+    font-size: 18px;
+  }
+  .accordion__item-vision {
+    font-size: 22px;
+  }
+  .accordion__item-vision span {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .accordion__item-click {
+    width: 35px;
+    height: 35px;
+  }
+  /*=============================   Application =======================================*/
+
+  .application__column-title {
+    font-size: 30px;
+  }
+  .application__column-text {
+    font-size: 20px;
+  }
+
+  .application__button {
     font-size: 18px;
   }
 }
