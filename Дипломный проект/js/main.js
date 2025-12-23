@@ -77,10 +77,9 @@ modalOpen.addEventListener("click", function () {
   modal.style.display = "flex";
   return;
 });
-modalCancle.addEventListener("click", function () {
-  modal.preventDefault;
+modalCancle.addEventListener("click", function (event) {
+  event.preventDefault();
   modal.style.display = "none";
-  return;
 });
 
 /*==========================    Burger  =================================*/
@@ -176,7 +175,7 @@ document.querySelectorAll(".accordion__item-click").forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const item = button.closest(".accotdion__item");
+    const item = button.closest(".accordion__item");
     const hiddenContent = item.querySelector(".accordion__item-hidden");
     const visionSpan = item.querySelector(".accordion__item-vision span");
 
