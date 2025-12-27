@@ -1,42 +1,47 @@
 /*===  JS code на выбор языка сайта с выпадающим меню  ===*/
 
-function toggleMenu(event) {
-  event.preventDefault();
-  const item = event.currentTarget.closest(".lang__item");
-  item.classList.toggle("open");
-}
+// Получаем элементы
+const langContainer = document.querySelector(".lang"); // контейнер
+const langItem = document.querySelector(".lang__item");
+const dropdown = document.querySelector(".dropdown");
+const flagIcon = document.querySelector(".flag-icon");
+const langSelection = document.querySelector(".lang-selection");
 
-document.querySelectorAll(".dropdown li").forEach((li) => {
-  li.addEventListener("click", () => {
-    const langCode = li.getAttribute("data-lang");
-    const flagSrc = li.getAttribute("data-flag");
-    const parentItem = li.closest(".lang__item");
+// Обработчик клика на весь контейнер .lang
+langContainer.addEventListener("click", (event) => {
+  const targetLi = event.target.closest("li");
+  // Если клик по пункту внутри dropdown
+  if (targetLi && targetLi.parentElement.classList.contains("dropdown")) {
+    // Меняем язык
+    const flagSrc = targetLi.getAttribute("data-flag");
+    const langCode = targetLi.getAttribute("data-short");
 
-    // Обновляем отображение выбранного языка
-    const shortName = li.getAttribute("data-short");
-    parentItem.querySelector(".lang-selection").textContent = shortName;
-
-    // Обновляем иконку флага
-    const flagIcon = parentItem.querySelector(".flag-icon");
     flagIcon.src = flagSrc;
-
-    // Обновляем активный класс
-    parentItem
-      .querySelectorAll(".dropdown li")
-      .forEach((i) => i.classList.remove("active"));
-    li.classList.add("active");
+    langSelection.textContent = langCode;
 
     // Закрываем меню
-    parentItem.classList.remove("open");
+    dropdown.style.display = "none";
+  } else {
+    // Иначе, при клике на любой другой части .lang, переключаем отображение меню
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+    } else {
+      dropdown.style.display = "block";
+    }
+  }
+});
 
-    // Тут можно добавить логику смены языка сайта
-  });
+// Обработка клика вне .lang для закрытия меню
+document.addEventListener("click", (event) => {
+  if (!document.querySelector(".lang").contains(event.target)) {
+    dropdown.style.display = "none";
+  }
 });
 
 /*===   JS code на обратный отсчет до конца акции   ===*/
 
 window.onload = function () {
-  const endDateStr = "2025-12-19T18:06:59"; // редактируйте при необходимости
+  const endDateStr = "2025-12-31T23:59:59"; // редактируйте при необходимости
   const endDate = new Date(endDateStr).getTime();
 
   function updateCountdown() {
@@ -154,30 +159,35 @@ function duringDrag(e) {
     riskSpan.textContent = "Низкий риск";
     riskSpan.style.backgroundImage =
       "linear-gradient(rgba(66, 89, 74, 0.4), rgba(101, 204, 125, 0.22))";
+    point.style.backgroundImage = `linear-gradient(to right, #61bb75)`;
     line.style.backgroundImage = `linear-gradient(to right, #61bb75 ${percentage}%, #303030 ${percentage}%)`;
   } else if (percentage > 40 && percentage <= 75) {
     discountSpan.textContent = "до 10%";
     riskSpan.textContent = "Средний риск";
     riskSpan.style.backgroundImage =
       "linear-gradient(rgba(148, 140, 49, 0.26), rgba(245, 222, 17, 0.25))";
+    point.style.backgroundImage = `linear-gradient(to right, #f7de11)`;
     line.style.backgroundImage = `linear-gradient(to right, #f7de11 ${percentage}%, #303030 ${percentage}%)`;
   } else {
     discountSpan.textContent = "до 15%";
     riskSpan.textContent = "Высокий риск";
     riskSpan.style.backgroundImage =
       "linear-gradient(rgba(148, 49, 49, 0.26), rgba(245, 17, 17, 0.25))";
+    point.style.backgroundImage = `linear-gradient(to right, #f51111)`;
     line.style.backgroundImage = `linear-gradient(to right, #f51111 ${percentage}%, #303030 ${percentage}%)`;
   }
 }
 
 /*=============================   Accordion =======================================*/
-document.querySelectorAll(".accordion__item-click").forEach((button) => {
-  button.addEventListener("click", (e) => {
+// Выбираем все элементы .accordion__item
+document.querySelectorAll(".accordion__item").forEach((item) => {
+  // Добавляем обработчик клика ко всему элементу
+  item.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const item = button.closest(".accordion__item");
     const hiddenContent = item.querySelector(".accordion__item-hidden");
     const visionSpan = item.querySelector(".accordion__item-vision span");
+    const button = item.querySelector(".accordion__item-click"); // если нужен для стилей
 
     const isOpen = hiddenContent.style.display === "block";
 
@@ -189,6 +199,7 @@ document.querySelectorAll(".accordion__item-click").forEach((button) => {
     // Восстанавливаем бордер у всех кнопок
     document.querySelectorAll(".accordion__item-click").forEach((btn) => {
       btn.style.border = "3px solid #272932";
+      btn.classList.remove("rotate180");
     });
 
     // Убираем фон у всех vision span
@@ -198,7 +209,7 @@ document.querySelectorAll(".accordion__item-click").forEach((button) => {
         span.style.background = "";
       });
 
-    // Открываем текущий, если закрыт
+    // Если текущий блок был закрыт, открываем его
     if (!isOpen) {
       hiddenContent.style.display = "block";
 
@@ -207,8 +218,13 @@ document.querySelectorAll(".accordion__item-click").forEach((button) => {
         visionSpan.style.background =
           "linear-gradient(to bottom, #6ba758, #23503d)";
       }
-      // Меняем бордер только у текущего открытого элемента
-      button.style.border = "3px solid #62666f"; // например, красный
+      // Меняем бордер только у текущего элемента
+      if (button) {
+        // Вращаем стрелку
+        button.classList.add("rotate180");
+        // Меняем бордер
+        button.style.border = "3px solid #62666f";
+      }
     }
   });
 });

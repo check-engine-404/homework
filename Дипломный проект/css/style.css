@@ -217,6 +217,10 @@ body {
   transition: all 0.4s;
 }
 
+.stocks__button:hover {
+  box-shadow: 0px 6px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 69px -3px rgba(226, 128, 72, 1);
+}
 .stocks__button:active {
   box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
     0px 3px 49px -3px rgba(226, 128, 72, 0.4);
@@ -460,6 +464,10 @@ body {
   transition: all 0.4s;
   color: #000000;
 }
+.bonus__button-click:hover {
+  box-shadow: 0px 6px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 69px -3px rgba(226, 128, 72, 1);
+}
 .bonus__button-click:active {
   box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
     0px 3px 49px -3px rgba(226, 128, 72, 0.4);
@@ -474,6 +482,10 @@ body {
   max-width: 377px;
   width: 100%;
   padding: 36px 25px;
+  transition: all 0.3s;
+}
+.bonus__button-open:hover {
+  opacity: 0.6;
 }
 /*=============================   Cards   =======================================*/
 
@@ -505,17 +517,13 @@ body {
   border-radius: 5px;
   padding: 52px 34px 34px 42px;
   cursor: pointer;
+  transition: all 0.4s;
 }
 .cards__grid-column:hover {
-  height: 500px;
-  background-image: linear-gradient(
-    135deg,
-    rgba(194, 173, 105, 0.2),
-    rgba(182, 223, 158, 0.2)
-  );
+  background-color: #23503d;
 }
 .cards__grid-column:hover .cards__grid-column-excerpt {
-  animation: example 2s infinite;
+  font-size: 22px;
 }
 
 .cards__grid-column-img {
@@ -539,6 +547,7 @@ body {
   text-align: right;
   text-decoration: underline;
   text-decoration-style: solid;
+  transition: all 0.5s;
 }
 
 /*=============================   briefcase =======================================*/
@@ -634,7 +643,7 @@ body {
   gap: 30px;
 }
 .chart__label {
-  pointer-events: none;
+  cursor: pointer;
 }
 .chart__checkbox {
   appearance: none;
@@ -647,7 +656,7 @@ body {
   cursor: pointer;
   pointer-events: auto;
 }
-.chart__checkbox:focus {
+.chart__checkbox:checked {
   border: 12px solid rgba(101, 202, 124, 1);
 }
 .briefcase__body-info {
@@ -677,6 +686,10 @@ body {
   text-align: center;
   color: rgba(0, 0, 0, 1);
   transition: all 0.4s;
+}
+.briefcase__body-info-button:hover {
+  box-shadow: 0px 6px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 69px -3px rgba(226, 128, 72, 1);
 }
 .briefcase__body-info-button:active {
   box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
@@ -846,12 +859,20 @@ body {
   padding: 24px 8px;
   max-width: 245px;
   width: 100%;
+  font-size: 16px;
+  transition: all 0.4s;
+}
+.mobile__phone-button-ios:hover {
+  box-shadow: 0 0px 8px rgb(255, 255, 255);
+}
+.mobile__phone-button-ios:active {
+  box-shadow: 0 0px 0px rgb(255, 255, 255);
 }
 .mobile__phone-button-ios::before {
   position: absolute;
   content: url(../img/icon/appleLog.svg);
-  top: 20px;
-  left: 30px;
+  top: 23px;
+  left: 25px;
 }
 .mobile__phone-button-android {
   position: relative;
@@ -864,12 +885,20 @@ body {
   border-radius: 35px;
   max-width: 245px;
   width: 100%;
+  font-size: 16px;
+  transition: all 0.4s;
+}
+.mobile__phone-button-android:hover {
+  box-shadow: 0 0px 8px rgb(255, 255, 255);
+}
+.mobile__phone-button-android:active {
+  box-shadow: 0 0px 0px rgb(255, 255, 255);
 }
 .mobile__phone-button-android::before {
   position: absolute;
   content: url(../img/icon/androidLog.svg);
-  top: 20px;
-  left: 30px;
+  top: 22px;
+  left: 25px;
 }
 .mobile__phone-img {
   position: relative;
@@ -923,6 +952,10 @@ body {
   color: #000000;
   transition: all 0.4s;
 }
+.question__consult-button:hover {
+  box-shadow: 0px 6px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 69px -3px rgba(226, 128, 72, 1);
+}
 .question__consult-button:active {
   box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
     0px 3px 49px -3px rgba(226, 128, 72, 0.4);
@@ -932,6 +965,7 @@ body {
 }
 .accordion__item {
   margin-bottom: 75px;
+  cursor: pointer;
 }
 .accordion__item:last-child {
   margin-bottom: 0px;
@@ -978,7 +1012,14 @@ body {
 .accordion__item-click img {
   width: 100%;
   transform: scale(0.5);
+  transition: all 0.4s;
 }
+
+.rotate180 img {
+  transform: scale(0.5) rotate(180deg);
+  transition: all 0.4s;
+}
+
 .accordion__item-hidden {
   display: none;
   background: linear-gradient(to bottom, #6aa75852, #23503d6c);
@@ -1130,16 +1171,6 @@ body {
   color: white;
   padding-left: 36px;
 }
-.application__input:focus + span {
-  top: 10px;
-  visibility: inherit;
-}
-.application__input:focus {
-  padding-top: 20px;
-}
-.application__input:focus::placeholder {
-  color: #202020;
-}
 .application__button {
   max-width: 376px;
   width: 100%;
@@ -1149,6 +1180,10 @@ body {
   line-height: 1.59;
   color: #000000;
   transition: all 0.4s;
+}
+.application__button:hover {
+  box-shadow: 0px 6px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 69px -3px rgba(226, 128, 72, 1);
 }
 .application__button:active {
   box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
@@ -1899,6 +1934,7 @@ body {
   .header__button {
     grid-column: 1 / 4;
     justify-content: center;
+    font-size: 16px;
   }
   .header__button-open {
     width: 180px;
@@ -1943,10 +1979,10 @@ body {
     align-items: center;
   }
   .action__button-openScore {
-    font-size: 16px;
+    font-size: 20px;
   }
   .action__button-download {
-    font-size: 16px;
+    font-size: 20px;
     min-width: 0;
   }
   .action__button-download img {
@@ -1967,7 +2003,7 @@ body {
     font-size: 20px;
   }
   .stocks__button {
-    font-size: 16px;
+    font-size: 20px;
   }
   /*=============================   Instrument =======================================*/
 
@@ -2026,11 +2062,9 @@ body {
     flex-direction: column;
     font-size: 16px;
   }
-  .bonus__button-open {
-    font-size: 16px;
-  }
+  .bonus__button-open,
   .bonus__button-click {
-    font-size: 16px;
+    font-size: 20px;
   }
   /*=============================   Cards  =======================================*/
   .cards__grid-column {
@@ -2084,17 +2118,19 @@ body {
   }
   .mobile__phone-button-ios {
     padding: 15px 15px;
+    font-size: 14px;
   }
   .mobile__phone-button-ios::before {
-    top: 11px;
-    left: 15px;
+    top: 12px;
+    left: 35px;
   }
   .mobile__phone-button-android {
     padding: 15px 15px;
+    font-size: 14px;
   }
   .mobile__phone-button-android::before {
-    top: 11px;
-    left: 15px;
+    top: 12px;
+    left: 17px;
   }
   /*=============================   Footer   =======================================*/
   .footer__inner {
@@ -2169,6 +2205,13 @@ body {
     right: 14px;
     transform: scale(1);
   }
+  .action__button-openScore {
+    font-size: 17px;
+  }
+  .action__button-download {
+    font-size: 17px;
+    min-width: 0;
+  }
   /*=============================   Stocks   =======================================*/
   .stocks__title {
     font-size: 32px;
@@ -2178,6 +2221,9 @@ body {
   }
   .stocks__text-more {
     font-size: 15px;
+  }
+  .stocks__button {
+    font-size: 17px;
   }
   /*=============================   Instrument =======================================*/
 
@@ -2215,6 +2261,10 @@ body {
   }
   .bonus__button {
     min-width: 300px;
+  }
+  .bonus__button-open,
+  .bonus__button-click {
+    font-size: 17px;
   }
   /*=============================   Cards  =======================================*/
   .cards__grid-column {
@@ -2262,7 +2312,7 @@ body {
     max-width: 300px;
   }
   .briefcase__body-info-button {
-    font-size: 18px;
+    font-size: 17px;
     max-width: 300px;
   }
   .briefcase__body {
@@ -2294,41 +2344,15 @@ body {
     display: flex;
     gap: 20px;
   }
-  .mobile__phone-button-ios {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #ffffff99;
-    background-color: transparent;
-    border-radius: 35px;
-    padding: 24px 8px;
-    max-width: 245px;
-    width: 100%;
-  }
+
   .mobile__phone-button-ios::before {
-    position: absolute;
-    content: url(../img/icon/appleLog.svg);
-    top: 20px;
-    left: 30px;
+    top: 12px;
+    left: 35px;
   }
-  .mobile__phone-button-android {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 8px 24px 40px;
-    border: 2px solid #ffffff99;
-    background-color: transparent;
-    border-radius: 35px;
-    max-width: 245px;
-    width: 100%;
-  }
+
   .mobile__phone-button-android::before {
-    position: absolute;
-    content: url(../img/icon/androidLog.svg);
-    top: 20px;
-    left: 30px;
+    top: 12px;
+    left: 17px;
   }
   /*=============================   Question =======================================*/
   .question {
@@ -2349,6 +2373,9 @@ body {
     width: 35px;
     height: 35px;
   }
+  .question__consult-button {
+    font-size: 17px;
+  }
   /*=============================   Application =======================================*/
 
   .application__column-title {
@@ -2357,21 +2384,28 @@ body {
   .application__column-text {
     font-size: 20px;
   }
-
+  .application__input {
+    font-size: 18px;
+  }
   .application__button {
     font-size: 18px;
   }
-  /*==========================    MODAL  =================================*/
-  .modal__window {
-    margin: 0 10px;
-    height: 500px;
-    padding: 15px 10px;
-  }
-  .modal__text {
-    margin-top: 20px;
-    font-size: 22px;
-    text-align: center;
-  }
+}
+/*==========================    Footer  =================================*/
+
+.footer__left-button {
+  font-size: 18px;
+}
+/*==========================    MODAL  =================================*/
+.modal__window {
+  margin: 0 10px;
+  height: 500px;
+  padding: 15px 10px;
+}
+.modal__text {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
 }
 
 @keyframes example {

@@ -27,11 +27,7 @@
                       alt="Флаг страны"
                     />
                     <p class="lang-selection">RU</p>
-                    <a
-                      class="lang-Button--selection"
-                      href="#"
-                      onclick="toggleMenu(event)"
-                    >
+                    <a class="lang-Button--selection" href="#">
                       <img
                         src="img/icon/angle-small-down1.svg"
                         alt="Значок галочки вниз"
@@ -538,7 +534,8 @@
                       <input
                         class="chart__checkbox"
                         type="radio"
-                        name="radio"
+                        name="choice"
+                        value="option1"
                         checked
                       />
                       Управляю деньгами сам
@@ -547,7 +544,8 @@
                       <input
                         class="chart__checkbox"
                         type="radio"
-                        name="radio"
+                        name="choice"
+                        value="option2"
                       />
                       Доверяю управление
                     </label>
@@ -649,9 +647,9 @@
                   <div class="accordion__item-vision">
                     <span>?</span>
                     Есть ли плата за обслуживание?
-                    <a class="accordion__item-click" href="#">
+                    <div class="accordion__item-click">
                       <img src="img/icon/Group.svg" alt="" />
-                    </a>
+                    </div>
                   </div>
                   <div class="accordion__item-hidden">
                     <p class="accordion__item-text">
@@ -666,9 +664,9 @@
                   <div class="accordion__item-vision">
                     <span>?</span>
                     Как вывести деньги со счёта?
-                    <a class="accordion__item-click" href="#">
+                    <div class="accordion__item-click">
                       <img src="img/icon/Group.svg" alt="" />
-                    </a>
+                    </div>
                   </div>
                   <div class="accordion__item-hidden">
                     <p class="accordion__item-text">
@@ -683,9 +681,9 @@
                   <div class="accordion__item-vision">
                     <span>?</span>
                     Какие налоги?
-                    <a class="accordion__item-click" href="#">
+                    <div class="accordion__item-click">
                       <img src="img/icon/Group.svg" alt="" />
-                    </a>
+                    </div>
                   </div>
                   <div class="accordion__item-hidden">
                     <p class="accordion__item-text">
@@ -700,9 +698,9 @@
                   <div class="accordion__item-vision">
                     <span>?</span>
                     Где хранятся деньги?
-                    <a class="accordion__item-click" href="#">
+                    <div class="accordion__item-click">
                       <img src="img/icon/Group.svg" alt="" />
-                    </a>
+                    </div>
                   </div>
                   <div class="accordion__item-hidden">
                     <p class="accordion__item-text">
@@ -717,9 +715,9 @@
                   <div class="accordion__item-vision">
                     <span>?</span>
                     Как открыть счёт?
-                    <a class="accordion__item-click" href="#">
+                    <div class="accordion__item-click">
                       <img src="img/icon/Group.svg" alt="" />
-                    </a>
+                    </div>
                   </div>
                   <div class="accordion__item-hidden">
                     <p class="accordion__item-text">
@@ -734,9 +732,9 @@
                   <div class="accordion__item-vision">
                     <span>?</span>
                     Как пополнить счёт?
-                    <a class="accordion__item-click" href="#">
+                    <div class="accordion__item-click">
                       <img src="img/icon/Group.svg" alt="" />
-                    </a>
+                    </div>
                   </div>
                   <div class="accordion__item-hidden">
                     <p class="accordion__item-text">
@@ -751,9 +749,9 @@
                   <div class="accordion__item-vision">
                     <span>?</span>
                     Что купить?
-                    <a class="accordion__item-click" href="#">
+                    <div class="accordion__item-click">
                       <img src="img/icon/Group.svg" alt="" />
-                    </a>
+                    </div>
                   </div>
                   <div class="accordion__item-hidden">
                     <p class="accordion__item-text">
@@ -908,7 +906,7 @@
             </div>
             <div class="footer__left">
               <p class="footer__left-text">Звонок по России бесплатный</p>
-              <span class="footer__left-phone">8 (495) 212-16-71</span>
+              <a class="footer__left-phone" href="#">8 (495) 212-16-71</a>
               <button class="footer__left-button button">
                 Перезвоните мне
               </button>
@@ -953,4 +951,3 @@
     <script src="js/main.js"></script>
   </body>
 </html>
-

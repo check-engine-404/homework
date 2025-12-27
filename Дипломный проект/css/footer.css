@@ -41,6 +41,11 @@
   background: #ffffff4a;
   border-radius: 50%;
 }
+.social:hover {
+
+border: 1px solid white;
+
+}
 .social a {
   padding: 11px;
   width: 45px;
@@ -74,6 +79,9 @@
   line-height: 1.4;
   margin-bottom: 40px;
 }
+.footer__left-phone:hover{
+  text-decoration-line: underline;
+}
 .footer__left-button {
   font-weight: 500;
   font-size: 22px;
@@ -83,6 +91,10 @@
   height: 71px;
   color: #000000;
   transition: all 0.4s;
+}
+.footer__left-button:hover {
+  box-shadow: 0px 6px 0px 0px rgba(143, 65, 25, 1),
+    0px 3px 69px -3px rgba(226, 128, 72, 1);
 }
 .footer__left-button:active {
   box-shadow: 0px 2px 0px 0px rgba(143, 65, 25, 1),
