@@ -1,0 +1,119 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  background: #212121;
+  font-size: 18px;
+  display: flex;
+  color: antiquewhite;
+  font-family: serif;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.todos__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.todos__title {
+  margin-top: 60px;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.todos__form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.todos__label {
+}
+.todos__input {
+  display: flex;
+  max-width: 400px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-size: 18px;
+  background: #ffffff11;
+}
+.todos__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100px;
+  width: 100%;
+  padding: 10px;
+  background: rgb(224, 209, 0);
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.todos__button:hover {
+  box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.777);
+}
+.todos__button:active {
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.777);
+}
+.todos__block {
+  display: flex;
+  max-width: 500px;
+  font-size: 26px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background: #ffffff11;
+}
+.todos__list {
+    width: 100%;
+}
+.todos__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todos__block-button {
+  display: flex;
+  gap: 5px;
+}
+.todos__block-button--enter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: rgb(209, 191, 26);
+  color: #212121;
+  font-size: 25px;
+}
+
+.todos__block-button--close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: rgb(209, 191, 26);
+  color: #212121;
+  font-size: 25px;
+}
+.todos__block-button--close:hover,
+.todos__block-button--enter:hover {
+  box-shadow: 0 0 2px 1px rgb(207, 204, 25);
+}
+.todos__block-button--close:active,
+.todos__block-button--enter:active {
+  border: 1px solid rgb(59, 57, 57);
+  box-shadow: 0 0 0px 0px rgb(207, 204, 25);
+}

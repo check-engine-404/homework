@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+    <title>JavaScriptTodos</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="todos__inner">
+          <h1 class="todos__title">Список дел</h1>
+          <form class="todos__form" action="">
+            <label class="todos__label">
+              <input
+                class="todos__input"
+                placeholder="Новая задача..."
+                type="text"
+              />
+            </label>
+            <button class="todos__button" type="button">Добавить</button>
+          </form>
+          <div class="todos__block">
+            <ul class="todos__list">
+              <li class="todos__item">
+                <div class="todos__item-text">Задача 1</div>
+                <div class="todos__block-button">
+                  <button class="todos__block-button--enter">v</button>
+                  <button class="todos__block-button--close">x</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
